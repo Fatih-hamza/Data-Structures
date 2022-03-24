@@ -5,27 +5,29 @@ from collections import deque
 
 class Queue:
 
-    def __init__(self):
-        self.items = deque()
+    def __init__(self, values=[]):
+        self.values = deque()
+        for value in values: 
+            dequeue.append(value)
 
     def is_empty(self):
-        return not self.items
+        return not self.values
 
     def enqueue(self, value):
         self.items.append(value)
 
     def dequeue(self):
-        return self.items.popleft()
+        return self.values.popleft()
 
     def peek(self):
-        return self.items[0]
+        return self.values[0]
 
     def size(self):
-        return len(self.items)
+        return len(self.values)
 
     def __str__(self):
-        items = [element for element in self.items]
-        return str(items)
+        values = [element for element in self.values]
+        return str(values)
 
 
 

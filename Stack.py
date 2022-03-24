@@ -1,7 +1,7 @@
 class Stack:
 
-    def __init__(self):
-        self.items = []
+    def __init__(self, items=[]):
+        self.items = items.copy()
 
     def is_empty(self):
         return not self.items
